@@ -1,92 +1,75 @@
-###🔐 1. Encapsulation
+🔐 **1\. Encapsulation**
+------------------------
 
-Encapsulation is the concept of protecting object data by making fields private and providing controlled access through getters and setters.
+Encapsulation is the concept of **protecting object data** by making fields private and providing controlled access through **getters and setters**.
 
-✔ Example
-'''BankAccount account = new BankAccount("Ahmed Arnab", new BigDecimal(10));
-account.withdraw(new BigDecimal(11));
-account.withdraw(new BigDecimal(4));
-'''
+### ✔ Example
 
-The BankAccount class hides sensitive fields such as ownerName and balance.
-This ensures:
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   BankAccount account = new BankAccount("Ahmed Arnab", new BigDecimal(10));  account.withdraw(new BigDecimal(11));  account.withdraw(new BigDecimal(4));   `
 
-Data cannot be modified directly.
+The BankAccount class hides sensitive fields such as ownerName and balance.This ensures:
 
-All changes (like withdrawing money) go through validation logic inside methods.
+*   Data cannot be modified directly.
+    
+*   All changes (like withdrawing money) go through **validation logic** inside methods.
+    
 
-🧬 2. Inheritance
+🧬 **2\. Inheritance**
+----------------------
 
-Inheritance allows one class to inherit properties and behaviors from another.
+Inheritance allows one class to **inherit properties and behaviors** from another.
 
-✔ Example
-Programmer programmer = new Programmer(
-        "Ahmed",
-        22,
-        "New Hargeisa",
-        "Java and Javascript",
-        programmingLanguages
-);
+### ✔ Example
 
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   Programmer programmer = new Programmer(          "Ahmed",          22,          "New Hargeisa",          "Java and Javascript",          programmingLanguages  );   `
 
 Here:
 
-Programmer extends a base class (e.g., Employee).
+*   Programmer extends a base class (e.g., Employee).
+    
+*   It inherits fields such as name, age, location.
+    
+*   It adds more specific behavior, such as writeSomeCode().
+    
 
-It inherits fields such as name, age, location.
+🧱 **3\. Abstraction**
+----------------------
 
-It adds more specific behavior, such as writeSomeCode().
+Abstraction means **hiding complexity** and exposing only essential functionality.
 
-🧱 3. Abstraction
+### ✔ Example
 
-Abstraction means hiding complexity and exposing only essential functionality.
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   Animal dog = new Dog("Jay");  Animal cat = new Cat("Milana");   `
 
-✔ Example
-Animal dog = new Dog("Jay");
-Animal cat = new Cat("Milana");
-
-
-Animal is an abstract class.
-
-It cannot be instantiated.
-
-It defines abstract methods like makeSound() that subclasses (Dog, Cat) must implement.
+*   Animal is an **abstract class**.
+    
+*   It cannot be instantiated.
+    
+*   It defines **abstract methods** like makeSound() that subclasses (Dog, Cat) must implement.
+    
 
 This forces consistent behavior while hiding implementation details.
 
-🎭 4. Polymorphism
+🎭 **4\. Polymorphism**
+-----------------------
 
-Polymorphism enables objects of different types to be treated the same way through a common interface or superclass.
+Polymorphism enables objects of different types to be **treated the same way** through a common interface or superclass.
 
-✔ Example 1 — Animals
-Animal dog = new Dog("Jay");
-Animal cat = new Cat("Milana");
+### ✔ Example 1 — Animals
 
-cat.makeSound();  // Cat-specific sound
-dog.makeSound();  // Dog-specific sound
-
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   Animal dog = new Dog("Jay");  Animal cat = new Cat("Milana");  cat.makeSound();  // Cat-specific sound  dog.makeSound();  // Dog-specific sound   `
 
 Both are treated as Animal, but each behaves differently.
 
-✔ Example 2 — Extractor Reports
-ExtractorReport extractorReport = new NumberExtractorReport();
-ExtractorReport emailExtractor = new EmailExtractor();
+### ✔ Example 2 — Extractor Reports
 
-emailExtractor.prepareAndSendReport(getFile());
-extractorReport.prepareAndSendReport(getFile());
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   ExtractorReport extractorReport = new NumberExtractorReport();  ExtractorReport emailExtractor = new EmailExtractor();  emailExtractor.prepareAndSendReport(getFile());  extractorReport.prepareAndSendReport(getFile());   `
 
-
-EmailExtractor and NumberExtractorReport both extend or implement ExtractorReport.
-
-They share the same interface/methods but provide different implementations.
-
-At runtime, Java decides which implementation to execute → dynamic polymorphism.
+*   EmailExtractor and NumberExtractorReport both extend or implement ExtractorReport.
+    
+*   They share the same interface/methods but provide **different implementations**.
+    
+*   At runtime, Java decides which implementation to execute → **dynamic polymorphism**.
+    
 
 This makes your code flexible and easy to extend.
-
-📝 Summary Table
-OOP Concept	Meaning	Example From Code
-Encapsulation	Hide data + expose through methods	BankAccount private fields, withdraw logic
-Inheritance	One class reuses another’s structure	Programmer → Employee
-Abstraction	Expose essential behavior, hide details	Abstract class Animal
-Polymorphism	One interface, many implementations	Dog/Cat, NumberExtractorReport/EmailExtractor
