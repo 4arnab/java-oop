@@ -1,12 +1,12 @@
-🔐 1. Encapsulation
+###🔐 1. Encapsulation
 
 Encapsulation is the concept of protecting object data by making fields private and providing controlled access through getters and setters.
 
 ✔ Example
-BankAccount account = new BankAccount("Ahmed Arnab", new BigDecimal(10));
+'''BankAccount account = new BankAccount("Ahmed Arnab", new BigDecimal(10));
 account.withdraw(new BigDecimal(11));
 account.withdraw(new BigDecimal(4));
-
+'''
 
 The BankAccount class hides sensitive fields such as ownerName and balance.
 This ensures:
