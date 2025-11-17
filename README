@@ -83,10 +83,3 @@ They share the same interface/methods but provide different implementations.
 At runtime, Java decides which implementation to execute → dynamic polymorphism.
 
 This makes your code flexible and easy to extend.
-
-📝 Summary Table
-OOP Concept	Meaning	Example From Code
-Encapsulation	Hide data + expose through methods	BankAccount private fields, withdraw logic
-Inheritance	One class reuses another’s structure	Programmer → Employee
-Abstraction	Expose essential behavior, hide details	Abstract class Animal
-Polymorphism	One interface, many implementations	Dog/Cat, NumberExtractorReport/EmailExtractor
